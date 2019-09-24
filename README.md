@@ -1,16 +1,10 @@
-# convoapp2019
+# UITM Cawangan Pulau Pinang Convocation Apps
 
-A new Flutter project.
+The first apps develop to provide all needed information regarding convocation ceremony. This app is develop using flutter and still in development process. This repository created to allow suggestion, idea and advice by other people and help me myself learn and improve 
+my flutter programming skill. 
 
-## Getting Started
+## Current Status (Development Phase)
 
-This project is a starting point for a Flutter application.
+This apps is still in development and will be updated from time to time. I will be much appreciate if anyone which expert in android apps development using flutter to give some opinion and suggestion.  
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
