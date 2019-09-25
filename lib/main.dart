@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:convoapp2019/page/maklumat(graduan).dart';
 //import 'package:convoapp2019/page/maklumat(waris).dart';
 //import 'package:convoapp2019/page/pengumuman.dart';
@@ -7,7 +6,6 @@ import 'package:convoapp2019/page/maklumat(graduan).dart';
 
 void main() {
   runApp(MaterialApp(
-    darkTheme: true,
     initialRoute: 'lamanutama',
     routes: {
       'lamanutama': (context) => LamanUtama(),
@@ -19,21 +17,40 @@ void main() {
 class LamanUtama extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: <Widget>[
-          Center(
-            child: Image.asset('images/banner.png'),
-          ),
-          Expanded(
-            child: Container(
-              height: 50.0,
+    return MaterialApp(
+      home: Scaffold(
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child: Image.asset(
+                'images/banner.png',
+              ),
+            ),
+            /*Container(
+                padding: const EdgeInsets.all(8.0),
+              ),*/
+            SizedBox(
+              height: 25,
+            ),
+            Expanded(
               child: ListView(
-                shrinkWrap: true,
                 children: <Widget>[
                   ListTile(
-                    title: Text('Maklumat Graduan'),
+                    title: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 5, color: Colors.black26),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      margin: EdgeInsets.all(4),
+                      padding: EdgeInsets.all(8.0),
+                      height: 50,
+                      child: Text(
+                        'Maklumat Graduan',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 20.0),
+                      ),
+                    ),
                     onTap: () {
                       Navigator.pushNamed(context, 'maklumat(graduan)');
                     },
@@ -41,9 +58,27 @@ class LamanUtama extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
+
+      /*Column(
+            children: <Widget>[
+              Expanded(
+                  child: ListView(
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      ListTile(
+                        title: Text('Maklumat Graduan'),
+                        onTap: () {
+                          Navigator.pushNamed(context, 'maklumat(graduan)');
+                        },
+                      ),
+                    ]
+                  ),
+                ),
+            ],
+          ),*/
     );
   }
 }
