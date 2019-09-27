@@ -39,7 +39,7 @@ class LamanUtama extends StatelessWidget {
         children: <Widget>[
           Container(
             child: Image.asset(
-              'images/banner.png',
+              'images/bulletin.png',
             ),
           ),
           SizedBox(
