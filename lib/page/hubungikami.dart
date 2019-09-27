@@ -40,13 +40,72 @@ class _HubungiKamiState extends State<HubungiKami> {
               ),
             ),
             Center(
-              child: ListTile(
-                contentPadding: EdgeInsets.all(8.0),
-                leading: Icon(Icons.code),
-                title: Text('PENYENGGARA APLIKASI',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+              child: Card(
+                child: ListTile(
+                  contentPadding: EdgeInsets.all(4.0),
+                  leading: Container(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(Icons.code, color: Colors.black),
+                  ),
+                  title: Text('PENYENGGARA APLIKASI',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
               ),
-            )
+            ),
+            Center(
+              child: Card(
+                elevation: 4.0,
+                child: ListTile(
+                  dense: true,
+                  contentPadding: EdgeInsets.all(2.0),
+                  leading: Container(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(Icons.contacts, color: Colors.black),
+                  ),
+                  title: Container(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text('Encik Muhammad Syabani Bin Hassan',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  subtitle: Container(
+                    padding: EdgeInsets.fromLTRB(8.0, 0, 0, 0),
+                    child: Text('Penolong Pegawai Teknologi Maklumat'),
+                  ),
+                  trailing: IconButton(
+                    padding: EdgeInsets.fromLTRB(0, 0, 16.0, 0),
+                    icon: Icon(Icons.call, color: Colors.black),
+                    onPressed: () => _service.call(number),
+                  ),
+                ),
+              ),
+            ),
+            Center(
+              child: Card(
+                elevation: 4.0,
+                child: ListTile(
+                  dense: true,
+                  contentPadding: EdgeInsets.all(2.0),
+                  leading: Container(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(Icons.contacts, color: Colors.black),
+                  ),
+                  title: Container(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text('Encik Muhammad Azamuddin Abu Bakar',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  subtitle: Container(
+                    padding: EdgeInsets.fromLTRB(8.0, 0, 0, 0),
+                    child: Text('Pelajar Praktikal Bahagian Infostruktur'),
+                  ),
+                  trailing: IconButton(
+                    padding: EdgeInsets.fromLTRB(0, 0, 16.0, 0),
+                    icon: Icon(Icons.call, color: Colors.black),
+                    onPressed: () => _service.call(number),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
         /* RaisedButton(
