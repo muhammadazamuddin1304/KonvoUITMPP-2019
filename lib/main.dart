@@ -1,16 +1,18 @@
+import 'package:convoapp2019/page/contactUs/service_locator.dart';
 import 'package:convoapp2019/page/prosedurkonvokesyen.dart';
 import 'package:flutter/material.dart';
 import 'package:convoapp2019/page/maklumat(graduan).dart';
 import 'package:convoapp2019/page/maklumat(waris).dart';
 import 'package:convoapp2019/page/pengumuman.dart';
 import 'package:flutter/rendering.dart';
-//import 'package:convoapp2019/page/hubungikami.dart';
+import 'package:convoapp2019/page/hubungikami.dart';
 
 void main() {
+  setupLocator();
   runApp(
     MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.brown,
       ),
       home: LamanUtama(),
       routes: {
@@ -19,6 +21,7 @@ void main() {
         '/3': (context) => MaklumatGraduan(),
         '/4': (context) => ProsedurKonvokesyen(),
         '/5': (context) => MaklumatIbuBapa(),
+        '/6': (context) => HubungiKami(),
       },
       debugShowCheckedModeBanner: false,
     ),
@@ -156,6 +159,35 @@ class LamanUtama extends StatelessWidget {
                         ),
                         onTap: () {
                           Navigator.pushNamed(context, '/5');
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                ListTile(
+                  title: Container(
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey,
+                            blurRadius: 4,
+                            offset: Offset(0, 2))
+                      ],
+                      border: Border.all(width: 5, color: Colors.black26),
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                    ),
+                    margin: EdgeInsets.all(4),
+                    padding: EdgeInsets.all(6.0),
+                    height: 50,
+                    child: Material(
+                      color: Colors.white,
+                      child: InkWell(
+                        child: Center(
+                          child: Text('HUBUNGI KAMI',
+                              style: TextStyle(fontSize: 21)),
+                        ),
+                        onTap: () {
+                          Navigator.pushNamed(context, '/6');
                         },
                       ),
                     ),
