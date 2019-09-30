@@ -68,7 +68,7 @@ class LamanUtama extends StatelessWidget {
                       child: InkWell(
                         child: Center(
                           child:
-                              Text('BULLETIN haha', style: TextStyle(fontSize: 21)),
+                              Text('BULLETIN', style: TextStyle(fontSize: 21)),
                         ),
                         onTap: () {
                           Navigator.pushNamed(context, '/2');
