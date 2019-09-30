@@ -45,7 +45,10 @@ class _TimelinePageState extends State<TimelinePage> {
               ),
             ]),
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text(
+            widget.title,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         body: PageView(
           onPageChanged: (i) => setState(() => pageIx = i),
