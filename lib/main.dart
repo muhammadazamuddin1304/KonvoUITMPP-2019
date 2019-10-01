@@ -40,12 +40,12 @@ class LamanUtama extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
-            stops: [0.1, 0.5, 0.7, 0.9],
+            stops: [0.1, 0.5, 0.8, 0.9],
             colors: [
-              Colors.yellow[900],
-              Colors.yellow,
-              Colors.yellowAccent,
-              Colors.yellowAccent[700],
+              Colors.purple[300],
+              Colors.yellow[200],
+              Colors.purple,
+              Colors.purple[900],
             ],
           ),
         ),
