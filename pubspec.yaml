@@ -23,6 +23,9 @@ dependencies:
   timeline_list: ^0.0.1
   url_launcher: ^5.1.4
   get_it: ^3.0.1
+  firebase_core: ^0.4.0+1
+  cloud_firestore: ^0.12.9+4
+  firebase_storage: ^3.0.6
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -51,6 +54,7 @@ flutter:
     - images/maklumatgraduan.png
     - images/prosedurkonvokesyen.jpg
     - images/ibu_bapa.jpg
+    - images/sidang1.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

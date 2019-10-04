@@ -1,11 +1,12 @@
-import 'package:convoapp2019/page/contactUs/service_locator.dart';
-import 'package:convoapp2019/page/prosedurkonvokesyen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:convoapp2019/page/maklumat(graduan).dart';
+import 'package:convoapp2019/page/sidang.dart';
 import 'package:convoapp2019/page/maklumat(waris).dart';
 import 'package:convoapp2019/page/pengumuman.dart';
-import 'package:flutter/rendering.dart';
 import 'package:convoapp2019/page/hubungikami.dart';
+import 'package:convoapp2019/page/contactUs/service_locator.dart';
+import 'package:convoapp2019/page/jawatankuasa.dart';
 
 void main() {
   setupLocator();
@@ -20,7 +21,8 @@ void main() {
         '/1': (context) => LamanUtama(),
         '/2': (context) => Bulletin(),
         '/3': (context) => MaklumatGraduan(),
-        '/4': (context) => ProsedurKonvokesyen(),
+        '/3.1': (context) => Sidang(),
+        '/4': (context) => JawatankuasaKonvo(),
         '/5': (context) => MaklumatIbuBapa(),
         '/6': (context) => HubungiKami(),
       },
@@ -40,9 +42,9 @@ class LamanUtama extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
-            stops: [0.1, 0.5, 0.8, 0.9],
+            stops: [0.1, 0.4, 0.6, 0.9],
             colors: [
-              Colors.purple[300],
+              Colors.purple[900],
               Colors.yellow[200],
               Colors.purple,
               Colors.purple[900],
@@ -57,11 +59,10 @@ class LamanUtama extends StatelessWidget {
               overflow: Overflow.visible,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.all(1.0),
+                  margin: EdgeInsets.only(left: 2.0, right: 1.0, top: 4.0),
                   decoration: BoxDecoration(
-                    border: Border.all(width: 2, color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                  ),
+                      border: Border.all(width: 3, color: Colors.black),
+                      borderRadius: BorderRadius.all(Radius.circular(8))),
                   child: Image.asset(
                     'images/banner.png',
                   ),
@@ -134,7 +135,7 @@ class LamanUtama extends StatelessWidget {
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              color: Colors.yellow[400],
+                              color: Colors.yellow[200],
                               blurRadius: 4,
                               offset: Offset(2, 4))
                         ],
@@ -187,7 +188,7 @@ class LamanUtama extends StatelessWidget {
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              color: Colors.yellow[400],
+                              color: Colors.yellow[200],
                               blurRadius: 4,
                               offset: Offset(2, 4))
                         ],
@@ -240,60 +241,7 @@ class LamanUtama extends StatelessWidget {
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              color: Colors.yellow[400],
-                              blurRadius: 4,
-                              offset: Offset(2, 4))
-                        ],
-                        border: Border.all(width: 5, color: Colors.black),
-                        borderRadius: BorderRadius.all(Radius.circular(8)),
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          stops: [0.1, 0.4, 0.6, 0.9],
-                          colors: [
-                            Colors.black87,
-                            Colors.black26,
-                            Colors.black26,
-                            Colors.black87,
-                          ],
-                        ),
-                      ),
-                      margin: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 0.0),
-                      padding: EdgeInsets.all(3.0),
-                      height: 50,
-                      child: InkWell(
-                        child: Center(
-                          child: Stack(
-                            children: <Widget>[
-                              Text('PROSEDUR KONVOKESYEN',
-                                  style: TextStyle(
-                                      fontSize: 21,
-                                      foreground: Paint()
-                                        ..style = PaintingStyle.stroke
-                                        ..strokeWidth = 4
-                                        ..color = Colors.black)),
-                              Text(
-                                'PROSEDUR KONVOKESYEN',
-                                style: TextStyle(
-                                  fontSize: 21,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        onTap: () {
-                          Navigator.pushNamed(context, '/4');
-                        },
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    title: Container(
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.yellow[400],
+                              color: Colors.yellow[200],
                               blurRadius: 4,
                               offset: Offset(2, 4))
                         ],
@@ -346,7 +294,60 @@ class LamanUtama extends StatelessWidget {
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                              color: Colors.yellow[400],
+                              color: Colors.amber,
+                              blurRadius: 4,
+                              offset: Offset(2, 4))
+                        ],
+                        border: Border.all(width: 5, color: Colors.black),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          stops: [0.1, 0.4, 0.6, 0.9],
+                          colors: [
+                            Colors.yellowAccent[700],
+                            Colors.black,
+                            Colors.black,
+                            Colors.yellowAccent[700],
+                          ],
+                        ),
+                      ),
+                      margin: EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 0.0),
+                      padding: EdgeInsets.all(3.0),
+                      height: 50,
+                      child: InkWell(
+                        child: Center(
+                          child: Stack(
+                            children: <Widget>[
+                              Text('JAWATANKUASA KONVOKESYEN',
+                                  style: TextStyle(
+                                      fontSize: 21,
+                                      foreground: Paint()
+                                        ..style = PaintingStyle.stroke
+                                        ..strokeWidth = 4
+                                        ..color = Colors.black)),
+                              Text(
+                                'JAWATANKUASA KONVOKESYEN',
+                                style: TextStyle(
+                                  fontSize: 21,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.pushNamed(context, '/4');
+                        },
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    title: Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.yellow[200],
                               blurRadius: 4,
                               offset: Offset(2, 4))
                         ],
