@@ -29,7 +29,9 @@ class _MyJawatankuasaKonvoState extends State<MyJawatankuasaKonvo> {
         child: Container(
             padding: const EdgeInsets.all(10.0),
             child: StreamBuilder<QuerySnapshot>(
-              stream: Firestore.instance.collection('tasks').snapshots(),
+              stream: Firestore.instance
+                  .collection('jawatankuasa_konvo')
+                  .snapshots(),
               builder: (BuildContext context,
                   AsyncSnapshot<QuerySnapshot> snapshot) {
                 if (snapshot.hasError)
